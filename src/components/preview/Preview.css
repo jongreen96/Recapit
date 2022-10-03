@@ -1,0 +1,39 @@
+.preview {
+    grid-column: 8/-1;
+    grid-row: 2/4;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.preview-content {
+    height: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+}
+
+.preview-content>img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.preview-footer {
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1440px) {
+    .preview {
+        grid-column: 7/-1;
+        grid-row: 3/4;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .preview {
+        grid-column: 1/-1;
+        grid-row: 3/4;
+    }
+}
+
+/* Preview content image needs correcting when laoding real data */
