@@ -1,6 +1,29 @@
+
 .sidebar {
     grid-column: 1/3;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.description {
+        overflow: hidden;
+}
+
+@media only screen and (max-width: 1440px) {
+    .sidebar {
+        grid-column: 1/-1;
+        flex-direction: row;
+        max-height: 55px;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .sidebar {
+        justify-content: space-between;
+    }
+
+    .description {
+        display: none;
+    }
 }

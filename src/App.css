@@ -27,3 +27,7 @@ body {
     align-items: center;
     gap: 10px;
 }
+
+.no-wrap {
+    white-space: nowrap;
+}

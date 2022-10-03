@@ -1,9 +1,3 @@
-@media only screen and (max-width: 1250px) {
-    .popular-subreddits {
-        display: none;
-    }
-}
-
 .popular-subreddits {
     grid-column: 1 / 3;
 }
@@ -24,3 +18,12 @@ li>img {
     width: 30px;
 }
 
+@media only screen and (max-width: 1440px) {
+    .popular-subreddits {
+        display: none;
+    }
+
+    .description {
+        text-overflow: ellipsis;
+    }
+}
