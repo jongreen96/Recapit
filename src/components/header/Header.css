@@ -14,9 +14,3 @@ input, select {
     width: 100px;
     height: 32px;
 }
-
-@media only screen and (max-width: 610px) {
-    .text {
-        display: none;
-    }
-}

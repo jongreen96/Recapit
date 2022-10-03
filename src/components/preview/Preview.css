@@ -1,8 +1,8 @@
 .preview {
-    grid-column: 8/-1;
-    grid-row: 2/4;
     padding: 0 !important;
     overflow: hidden;
+    grid-column: 3/4;
+    grid-row: 2/4;
 }
 
 .preview-content {
@@ -20,20 +20,6 @@
 
 .preview-footer {
     padding: 10px;
-}
-
-@media only screen and (max-width: 1440px) {
-    .preview {
-        grid-column: 7/-1;
-        grid-row: 3/4;
-    }
-}
-
-@media only screen and (max-width: 610px) {
-    .preview {
-        grid-column: 1/-1;
-        grid-row: 3/4;
-    }
 }
 
 /* Preview content image needs correcting when laoding real data */

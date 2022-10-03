@@ -6797,7 +6797,7 @@ const response = {
 	},
 };
 
-const data = response.data.children.map((item) => item.data);
+export const data = response.data.children.map((item) => item.data);
 
 console.log(data[0].author);
 
