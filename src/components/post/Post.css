@@ -1,10 +1,9 @@
 .post {
     display: flex;
     justify-content: space-between;
-    min-height: 100px;
+    height: auto;
     align-items: center;
     padding: 0 0 0 10px !important;
-    overflow: hidden;
 }
 
 .post-stats {
