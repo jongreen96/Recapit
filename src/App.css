@@ -5,6 +5,12 @@ body {
     color: #707070;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+}
+
 .tile {
 	background-color: #fff;
 	border-radius: 10px;

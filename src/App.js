@@ -6,7 +6,7 @@ import './App.css';
 function App() {
 	return (
 		<div className='App grid-container'>
-			<Header />
+      <Header />
 		</div>
 	);
 }
