@@ -4,7 +4,7 @@ const Sidebar = () => {
 	return (
 		<div className='sidebar tile'>
 			<div className='no-wrap'>
-			<h2>
+			<h2 className='text'>
 				Current Subreddit: 
 			</h2>
 			<h2>
