@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.header-logo {
+    width: 32px;
+}
+
+input, select {
+    width: 100px;
+    height: 32px;
+}
+
+@media only screen and (max-width: 610px) {
+    .text {
+        display: none;
+    }
+}
