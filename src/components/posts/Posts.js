@@ -1,11 +1,14 @@
 import './Posts.css';
-import { data } from '../../data/DummyData';
 import Post from '../post/Post';
+import { useSelector } from 'react-redux';
+import { selectPosts } from '../../features/subreddit/subredditSlice';
 
 const Posts = () => {
+	const posts = useSelector(selectPosts);
+
 	return (
 		<div className='posts'>
-			{data.map((post) => {
+			{posts.map((post) => {
 				return <Post data={post} />;
 			})}
 		</div>
