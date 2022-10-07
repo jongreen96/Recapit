@@ -12,7 +12,7 @@ const Post = ({ data }) => {
                     <p>Share</p>
                 </div>
                 <div className='post-thumbnail'>
-                    <img src={data.thumbnail !== 'default' ? data.thumbnail : logo} alt='thumbnail' />
+                    <img src={data.thumbnail !== 'default' && data.thumbnail !== 'self' ? data.thumbnail : logo} alt='thumbnail' />
                 </div>
             </div>
         </div>
