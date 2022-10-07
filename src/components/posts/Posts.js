@@ -13,8 +13,6 @@ const Posts = () => {
 		dispatch(fetchPosts(subreddit));
 	}, [subreddit, dispatch]);
 
-	console.log(posts[6]);
-
 	return (
 		<div className='posts'>
 			{posts.map((post, i) => {
