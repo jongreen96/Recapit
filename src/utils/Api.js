@@ -15,7 +15,7 @@ export const fetchSubreddit = createAsyncThunk(
 	'subreddit/fetchSubreddit',
 	async (subreddit) => {
 		const response = await fetch(
-			`https://www.reddit.com/r/${subreddit}/about/.json`
+			`https://www.reddit.com/r/${subreddit}/about.json`
 		);
 		const data = await response.json();
 		return data.data;

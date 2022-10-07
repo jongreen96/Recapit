@@ -1,32 +1,48 @@
 import './Sidebar.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectSubreddit } from '../../features/subreddit/subredditSlice';
+import { fetchSubreddit } from '../../utils/Api';
+import { useEffect } from 'react';
 
 const Sidebar = () => {
+	const dispatch = useDispatch();
+	const { subreddit, subredditInfo, isLoading, isError } =
+		useSelector(selectSubreddit);
+
+	useEffect(() => {
+		dispatch(fetchSubreddit(subreddit));
+	}, [subreddit, dispatch]);
+
+	if (isLoading) return <div className='sidebar'>Loading...</div>;
+	if (isError) return <div className='sidebar'>Error!</div>;
+
 	return (
 		<div className='sidebar tile'>
 			<div className='no-wrap'>
-			<h2 className='text'>
-				Current Subreddit: 
-			</h2>
-			<h2>
-				<strong>
-					r/<span className='blue'>Formula1</span>
-				</strong>
-			</h2>
+				<h2 className='text'>Current Subreddit:</h2>
+				<h2>
+					<strong>
+						r/<span className='blue'>{subredditInfo.display_name}</span>
+					</strong>
+				</h2>
 			</div>
 			<p className='description'>
-				The best independent Formula 1 community anywhere. News, stories
-				and discussion from and about the world of Formula 1.
+				{subredditInfo.public_description}
 			</p>
-            <div className='stats flex-container'>
-                <div>
-                    <h3 className='blue'><strong>6.9m</strong></h3>
-                    <p>Members</p>
-                </div>
-                <div>
-                    <h3 className='blue'><strong>42.0k</strong></h3>
-                    <p>Online</p>
-                </div>
-            </div>
+			<div className='stats flex-container'>
+				<div>
+					<h3 className='blue'>
+						<strong>{subredditInfo.subscribers}</strong>
+					</h3>
+					<p>Members</p>
+				</div>
+				<div>
+					<h3 className='blue'>
+						<strong>{subredditInfo.active_user_count}</strong>
+					</h3>
+					<p>Online</p>
+				</div>
+			</div>
 		</div>
 	);
 };
