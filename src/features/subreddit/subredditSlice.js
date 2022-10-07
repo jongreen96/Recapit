@@ -1,21 +1,11 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-
-export const fetchPosts = createAsyncThunk(
-	'subreddit/fetchPosts',
-	async (subreddit) => {
-		const response = await fetch(
-			`https://www.reddit.com/r/${subreddit}/top/.json`
-		);
-		const data = await response.json();
-		return data.data.children.map((post) => post.data);
-	}
-);
+import { createSlice } from '@reduxjs/toolkit'
+import { fetchSubreddit } from '../../utils/Api';
 
 const subredditSlice = createSlice({
 	name: 'subreddit',
 	initialState: {
 		subreddit: 'all',
-		posts: [],
+		subredditInfo: {},
         isLoading: false,
 		isError: false,
 	},
@@ -25,19 +15,19 @@ const subredditSlice = createSlice({
 		},
 	},
 	extraReducers: {
-		[fetchPosts.fulfilled]: (state, action) => {
-			state.posts = action.payload;
+		[fetchSubreddit.fulfilled]: (state, action) => {
+			state.subredditInfo = action.payload;
 			state.isLoading = false;
 			state.isError = false;
 		},
-		[fetchPosts.pending]: (state) => {
+		[fetchSubreddit.pending]: (state) => {
 			state.isLoading = true;
 			state.isError = false;
 		},
-		[fetchPosts.rejected]: (state) => {
+		[fetchSubreddit.rejected]: (state) => {
 			state.isLoading = false;
 			state.isError = true;
-		}
+		},
 	},
 });
 

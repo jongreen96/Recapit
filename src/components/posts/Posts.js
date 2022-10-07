@@ -1,16 +1,15 @@
 import './Posts.css';
 import Post from '../post/Post';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-	selectPosts,
-	fetchPosts,
-	selectSubreddit,
-} from '../../features/subreddit/subredditSlice';
 import { useEffect } from 'react';
+import { selectSubreddit } from '../../features/subreddit/subredditSlice';
+import { selectPosts } from '../../features/posts/PostsSlice';
+import { fetchPosts } from '../../utils/Api';
 
 const Posts = () => {
 	const dispatch = useDispatch();
-	const { subreddit, posts, isLoading, isError } = useSelector(selectSubreddit);
+	const { posts, isLoading, isError } = useSelector(selectPosts);
+	const { subreddit } = useSelector(selectSubreddit);
 
 	useEffect(() => {
 		dispatch(fetchPosts(subreddit));
