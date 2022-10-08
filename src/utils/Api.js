@@ -1,4 +1,4 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchPosts = createAsyncThunk(
 	'subreddit/fetchPosts',
@@ -16,6 +16,17 @@ export const fetchSubreddit = createAsyncThunk(
 	async (subreddit) => {
 		const response = await fetch(
 			`https://www.reddit.com/r/${subreddit}/about.json`
+		);
+		const data = await response.json();
+		return data.data;
+	}
+);
+
+export const performSearch = createAsyncThunk(
+	'search/performSearch',
+	async (query) => {
+		const response = await fetch(
+			`https://www.reddit.com/subreddits/search.json?q=${query}`
 		);
 		const data = await response.json();
 		return data.data;
