@@ -1,5 +1,6 @@
 import logo from '../../images/recapit-logo.svg';
 import './Header.css';
+import Search from '../search/Search';
 
 const Header = () => {
 	return (
@@ -21,10 +22,7 @@ const Header = () => {
 					<option value='All Time'>All Time</option>
 				</select>
 			</div>
-			<div className='flex-container'>
-				<p className='text'>Subreddit Search: </p>
-				<input type='text' placeholder='Search...' className='blue'/>
-			</div>
+			<Search />
 		</div>
 	);
 };

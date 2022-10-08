@@ -1,36 +1,35 @@
-
 .sidebar {
 	display: flex;
 	flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+	justify-content: space-between;
 	gap: 20px;
-    grid-column: 1/2;
-    grid-row: 2/3;
-    overflow: hidden;
+	grid-column: 1/2;
+	grid-row: 2/3;
+	overflow: hidden;
 }
 
 .description {
-        overflow: scroll;
+	overflow: scroll;
 }
 
 @media only screen and (max-width: 1440px) {
-    .sidebar {
-        grid-column: 1/-1;
-        grid-row: 2/3;
+	.sidebar {
+		grid-column: 1/-1;
+		grid-row: 2/3;
 
-        flex-direction: row;
-    }
+		flex-direction: row;
+		align-items: center;
+	}
 
-    .sidebar>.no-wrap {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-    }
+	.sidebar > .no-wrap {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+	}
 }
 
 @media only screen and (max-width: 768px) {
-    .description {
-        display: none;
-    }
+	.description {
+		display: none;
+	}
 }
