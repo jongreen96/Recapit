@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 import { fetchSubreddit } from '../../utils/Api';
 
 const subredditSlice = createSlice({
@@ -6,7 +6,7 @@ const subredditSlice = createSlice({
 	initialState: {
 		subreddit: 'formula1',
 		subredditInfo: {},
-        isLoading: false,
+		isLoading: false,
 		isError: false,
 	},
 	reducers: {
@@ -31,7 +31,7 @@ const subredditSlice = createSlice({
 	},
 });
 
-export const selectSubreddit = state => state.subreddit;
+export const selectSubreddit = (state) => state.subreddit;
 
 export const { setSubreddit } = subredditSlice.actions;
 export default subredditSlice.reducer;

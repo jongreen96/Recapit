@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { performSearch } from '../../utils/Api';
 
-
 const searchSlice = createSlice({
 	name: 'search',
 	initialState: {

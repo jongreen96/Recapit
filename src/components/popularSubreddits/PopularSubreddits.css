@@ -1,28 +1,28 @@
 .popular-subreddits {
-    grid-column: 1/2;
-    grid-row: 3/4;
-    overflow: scroll;
-    max-height: 400px;
+	grid-column: 1/2;
+	grid-row: 3/4;
+	overflow: scroll;
+	max-height: 400px;
 }
 
 ul {
-    padding: 0;
+	padding: 0;
 }
 
 li {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-top: 5px;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	margin-top: 5px;
 }
 
-li>img {
-    width: 30px;
+li > img {
+	width: 30px;
 }
 
 @media only screen and (max-width: 1440px) {
-    .popular-subreddits {
-        display: none;
-    }
+	.popular-subreddits {
+		display: none;
+	}
 }

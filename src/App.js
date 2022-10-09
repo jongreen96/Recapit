@@ -11,7 +11,7 @@ function App() {
 	return (
 		<div className='App grid-container'>
 			<div className='container'>
-      			<Header />
+				<Header />
 				<Sidebar />
 				<PopularSubreddits />
 				<Preview />

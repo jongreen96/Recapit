@@ -1,22 +1,22 @@
 .posts {
-    grid-column: 2/3;
-    grid-row: 2/4;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    overflow: scroll;
+	grid-column: 2/3;
+	grid-row: 2/4;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	overflow: scroll;
 }
 
 @media only screen and (max-width: 1440px) {
-    .posts {
-        grid-column: 1/3;
-        grid-row: 3/4;
-    }
+	.posts {
+		grid-column: 1/3;
+		grid-row: 3/4;
+	}
 }
 
 @media only screen and (max-width: 768px) {
-    .posts {
-        grid-column: 1/-1;
-        grid-row: 4/5;
-    }
+	.posts {
+		grid-column: 1/-1;
+		grid-row: 4/5;
+	}
 }

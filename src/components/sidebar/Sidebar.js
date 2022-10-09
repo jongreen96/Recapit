@@ -15,7 +15,8 @@ const Sidebar = () => {
 	}, [subreddit, dispatch]);
 
 	if (isLoading) return <div className='sidebar'>Loading...</div>;
-	if (isError) return <div className='sidebar'>Error! Please reload page.</div>;
+	if (isError)
+		return <div className='sidebar'>Error! Please reload page.</div>;
 
 	return (
 		<div className='sidebar tile'>
@@ -23,23 +24,28 @@ const Sidebar = () => {
 				<h2 className='text'>Current Subreddit:</h2>
 				<h2>
 					<strong>
-						r/<span className='blue'>{subredditInfo.display_name}</span>
+						r/
+						<span className='blue'>
+							{subredditInfo.display_name}
+						</span>
 					</strong>
 				</h2>
 			</div>
-			<p className='description'>
-				{subredditInfo.public_description}
-			</p>
+			<p className='description'>{subredditInfo.public_description}</p>
 			<div className='stats flex-container'>
 				<div>
 					<h3 className='blue'>
-						<strong>{formatNumber(subredditInfo.subscribers)}</strong>
+						<strong>
+							{formatNumber(subredditInfo.subscribers)}
+						</strong>
 					</h3>
 					<p>Members</p>
 				</div>
 				<div>
 					<h3 className='blue'>
-						<strong>{formatNumber(subredditInfo.active_user_count)}</strong>
+						<strong>
+							{formatNumber(subredditInfo.active_user_count)}
+						</strong>
 					</h3>
 					<p>Online</p>
 				</div>
