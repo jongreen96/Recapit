@@ -1,9 +1,10 @@
 .post {
 	display: flex;
 	justify-content: space-between;
-	height: auto;
+	min-height: 100px;
 	align-items: center;
 	padding: 0 0 0 10px !important;
+	overflow: hidden;
 }
 
 .post-stats {
@@ -20,5 +21,4 @@ img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
-	border-radius: 0 10px 10px 0;
 }

@@ -5,6 +5,7 @@ const postsSlice = createSlice({
 	name: 'posts',
 	initialState: {
 		posts: [],
+		selectedPost: null,
 		time: 'day',
 		isLoading: false,
 		isError: false,
@@ -13,10 +14,14 @@ const postsSlice = createSlice({
 		setTime: (state, action) => {
 			state.time = action.payload;
 		},
+		setSelectedPost: (state, action) => {
+			state.selectedPost = action.payload;
+		},
 	},
 	extraReducers: {
 		[fetchPosts.fulfilled]: (state, action) => {
 			state.posts = action.payload;
+			state.selectedPost = action.payload[0].id;
 			state.isLoading = false;
 			state.isError = false;
 		},
@@ -33,5 +38,5 @@ const postsSlice = createSlice({
 
 export const selectPosts = (state) => state.posts;
 
-export const { setTime } = postsSlice.actions;
+export const { setTime, setSelectedPost } = postsSlice.actions;
 export default postsSlice.reducer;
