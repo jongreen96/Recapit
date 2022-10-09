@@ -26,10 +26,9 @@ export const performSearch = createAsyncThunk(
 	'search/performSearch',
 	async (query) => {
 		const response = await fetch(
-			`https://www.reddit.com/subreddits/search.json?q=${query}&limit=5`
+			`https://www.reddit.com/subreddits/search.json?q=${query}&limit=50`
 		);
 		const data = await response.json();
-		console.log(data);
 		return data.data.children.map((subreddit) => subreddit.data);
 	}
 );

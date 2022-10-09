@@ -15,7 +15,7 @@ const Sidebar = () => {
 	}, [subreddit, dispatch]);
 
 	if (isLoading) return <div className='sidebar'>Loading...</div>;
-	if (isError) return <div className='sidebar'>Error!</div>;
+	if (isError) return <div className='sidebar'>Error! Please reload page.</div>;
 
 	return (
 		<div className='sidebar tile'>
