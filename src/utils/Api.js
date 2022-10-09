@@ -2,9 +2,9 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchPosts = createAsyncThunk(
 	'subreddit/fetchPosts',
-	async (subreddit) => {
+	async ({ subreddit, time }) => {
 		const response = await fetch(
-			`https://www.reddit.com/r/${subreddit}/top/.json`
+			`https://www.reddit.com/r/${subreddit}/top/.json?t=${time}`
 		);
 		const data = await response.json();
 		return data.data.children.map((post) => post.data);

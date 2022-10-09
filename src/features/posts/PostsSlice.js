@@ -5,10 +5,16 @@ const postsSlice = createSlice({
     name: 'posts',
     initialState: {
         posts: [],
+        time: 'week',
         isLoading: false,
         isError: false,
     },
-    reducers: {},
+    reducers: {
+        setTime: (state, action) => {
+            console.log(action.payload)
+            state.time = action.payload;
+        },
+    },
     extraReducers: {
         [fetchPosts.fulfilled]: (state, action) => {
             state.posts = action.payload;
@@ -28,4 +34,5 @@ const postsSlice = createSlice({
 
 export const selectPosts = state => state.posts;
 
+export const { setTime } = postsSlice.actions;
 export default postsSlice.reducer;

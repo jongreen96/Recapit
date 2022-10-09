@@ -1,6 +1,7 @@
 import logo from '../../images/recapit-logo.svg';
 import './Header.css';
 import Search from '../search/Search';
+import Time from '../time/Time';
 
 const Header = () => {
 	return (
@@ -12,16 +13,7 @@ const Header = () => {
 					<span className='blue'>it</span>
 				</h1>
 			</div>
-			<div className='flex-container'>
-				<p className='text'> Recap time: </p>
-				<select className='blue'>
-					<option value='DAY'>Day</option>
-					<option value='Week'>Week</option>
-					<option value='Month'>Month</option>
-					<option value='Year'>Year</option>
-					<option value='All Time'>All Time</option>
-				</select>
-			</div>
+			<Time />
 			<Search />
 		</div>
 	);

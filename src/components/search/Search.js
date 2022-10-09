@@ -8,8 +8,7 @@ import './Search.css';
 
 const Search = () => {
 	const dispatch = useDispatch();
-	const { query, searchResults, isLoading, isError } =
-		useSelector(selectSearch);
+	const { query, searchResults } = useSelector(selectSearch);
 
 	useEffect(() => {
 		dispatch(performSearch(query));

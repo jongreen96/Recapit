@@ -8,12 +8,13 @@ import { fetchPosts } from '../../utils/Api';
 
 const Posts = () => {
 	const dispatch = useDispatch();
-	const { posts, isLoading, isError } = useSelector(selectPosts);
+	const { posts, time, isLoading, isError } = useSelector(selectPosts);
 	const { subreddit } = useSelector(selectSubreddit);
 
 	useEffect(() => {
-		dispatch(fetchPosts(subreddit));
-	}, [subreddit, dispatch]);
+		const data = { subreddit, time };
+		dispatch(fetchPosts(data));
+	}, [subreddit, time, dispatch]);
 
 	if (isLoading) return <div className='posts'>Loading...</div>;
 
