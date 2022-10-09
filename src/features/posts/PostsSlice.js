@@ -5,7 +5,7 @@ const postsSlice = createSlice({
 	name: 'posts',
 	initialState: {
 		posts: [],
-		time: 'week',
+		time: 'day',
 		isLoading: false,
 		isError: false,
 	},

@@ -3,6 +3,7 @@
 	grid-row: 3/4;
 	overflow: scroll;
 	max-height: 400px;
+	cursor: pointer;
 }
 
 ul {
@@ -15,6 +16,11 @@ li {
 	align-items: center;
 	gap: 5px;
 	margin-top: 5px;
+}
+
+li:hover {
+	color: #0099cc;
+	background-color: #f5f5f5;
 }
 
 li > img {

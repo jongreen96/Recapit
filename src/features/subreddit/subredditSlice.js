@@ -4,7 +4,7 @@ import { fetchSubreddit } from '../../utils/Api';
 const subredditSlice = createSlice({
 	name: 'subreddit',
 	initialState: {
-		subreddit: 'formula1',
+		subreddit: 'all',
 		subredditInfo: {},
 		isLoading: false,
 		isError: false,

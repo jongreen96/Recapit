@@ -23,8 +23,14 @@ const Search = () => {
 				className='blue'
 				value={query}
 				onChange={(e) => dispatch(setQuery(e.target.value))}
+				onKeyDown={(e) => {
+					if (e.key === 'Enter' && query) {
+						dispatch(setSubreddit(query));
+						dispatch(setQuery(''));
+					}
+				}}
 			/>
-			{searchResults.length !== 0 && (
+			{query && (
 				<div className='search-results tile'>
 					{searchResults.map((subreddit) => (
 						<div
