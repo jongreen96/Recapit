@@ -13,9 +13,22 @@
 	background-color: #f5f5f5;
 }
 
+.preview-text {
+	height: auto;
+	padding: 10px;
+	background-color: #f5f5f5;
+}
+
+.preview-text h2 {
+	font-weight: bold;
+}
+
+.preview-text h3 {
+	padding-top: 15px;
+}
+
 .preview-content > img {
-	max-width: fit-content;
-	max-height: max-content;
+	object-fit: contain;
 }
 
 .preview-footer {
