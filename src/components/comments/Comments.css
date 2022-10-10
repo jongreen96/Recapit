@@ -1,0 +1,17 @@
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    overflow: scroll;
+}
+
+.comment {
+    display: flex;
+    gap: 10px;
+}
+
+.comment>img {
+    width: 30px;
+    height: 30px;
+}

@@ -4,7 +4,7 @@ import { fetchPost } from '../../utils/Api';
 const PostSlice = createSlice({
 	name: 'post',
 	initialState: {
-		post: [],
+		post: {},
 		isLoading: true,
 		isError: false,
 	},

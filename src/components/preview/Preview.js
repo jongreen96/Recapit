@@ -11,16 +11,26 @@ import { fetchPost } from '../../utils/Api';
 
 const Preview = () => {
 	const dispatch = useDispatch();
-	const { post, isLoading, isError } = useSelector(selectPost);
+	const { post } = useSelector(selectPost);
 	const { posts } = useSelector(selectPosts);
 	const { selectedPost } = useSelector(selectPosts);
 	let currentPost = posts.find((post) => post.id === selectedPost);
+	const subreddit = currentPost?.subreddit;
+
+	useEffect(() => {
+		if (subreddit) {
+			dispatch(fetchPost({ subreddit, selectedPost }));
+		}
+	}, [dispatch, subreddit, selectedPost]);
 
 	return (
 		<div className='preview tile'>
-			<h2>{currentPost.title}</h2>
+			<Media post={currentPost} />
+			<h2 className='title'>{currentPost?.title}</h2>
+			<p className='subtext'>{currentPost?.selftext}</p>
+			<Comments comments={post.comments} />
 		</div>
-	)
+	);
 };
 
 export default Preview;

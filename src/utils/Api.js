@@ -57,6 +57,8 @@ export const fetchPost = createAsyncThunk(
 			`https://www.reddit.com/r/${subreddit}/comments/${selectedPost}.json`
 		);
 		const data = await response.json();
-		return data;
+		const post = data[0].data.children[0].data;
+		const comments = data[1].data.children;
+		return { post, comments };
 	}
 );
