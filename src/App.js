@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Header from './components/header/Header';
-import Sidebar from './components/sidebar/Sidebar';
 import PopularSubreddits from './components/popularSubreddits/PopularSubreddits';
+import Sidebar from './components/sidebar/Sidebar';
 import Preview from './components/preview/Preview';
+import Header from './components/header/Header';
 import Posts from './components/posts/Posts';
 import './App.css';
 
@@ -14,8 +14,8 @@ function App() {
 				<Header />
 				<Sidebar />
 				<PopularSubreddits />
-				<Preview />
 				<Posts />
+				<Preview />
 			</div>
 		</div>
 	);

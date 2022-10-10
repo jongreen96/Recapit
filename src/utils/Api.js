@@ -7,7 +7,6 @@ export const fetchPosts = createAsyncThunk(
 			`https://www.reddit.com/r/${subreddit}/top/.json?t=${time}`
 		);
 		const data = await response.json();
-		console.log(data);
 		return data.data.children.map((post) => post.data);
 	}
 );
@@ -53,12 +52,11 @@ export const performSearch = createAsyncThunk(
 
 export const fetchPost = createAsyncThunk(
 	'post/fetchPost',
-	async ({ subreddit, id }) => {
+	async ({ subreddit, selectedPost }) => {
 		const response = await fetch(
-			`https://www.reddit.com/r/${subreddit}/comments/${id}.json`
+			`https://www.reddit.com/r/${subreddit}/comments/${selectedPost}.json`
 		);
 		const data = await response.json();
-		console.log(data);
 		return data;
 	}
 );
