@@ -7,6 +7,7 @@ export const fetchPosts = createAsyncThunk(
 			`https://www.reddit.com/r/${subreddit}/top/.json?t=${time}`
 		);
 		const data = await response.json();
+		console.log(data);
 		return data.data.children.map((post) => post.data);
 	}
 );
@@ -17,7 +18,8 @@ export const fetchSubreddit = createAsyncThunk(
 		if (subreddit === 'all') {
 			return {
 				display_name: subreddit,
-				public_description: 'The most active posts from all of Reddit. Come here to see new posts rising and be a part of the conversation.',
+				public_description:
+					'The most active posts from all of Reddit. Come here to see new posts rising and be a part of the conversation.',
 				subscribers: 'N/A',
 				active_user_count: 'N/A',
 			};
@@ -52,8 +54,11 @@ export const performSearch = createAsyncThunk(
 export const fetchPost = createAsyncThunk(
 	'post/fetchPost',
 	async ({ subreddit, id }) => {
-		const response = await fetch(`https://www.reddit.com/r/${subreddit}/comments/${id}.json`);
+		const response = await fetch(
+			`https://www.reddit.com/r/${subreddit}/comments/${id}.json`
+		);
 		const data = await response.json();
+		console.log(data);
 		return data;
 	}
 );
