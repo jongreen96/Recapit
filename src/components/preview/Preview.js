@@ -1,11 +1,17 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import logo from '../../images/recapit-logo.svg';
 import './Preview.css';
 
 const Preview = () => {
 	const { posts, selectedPost } = useSelector((state) => state.posts);
 	const data = posts.find((post) => post.id === selectedPost);
+	const dispatch = useDispatch();
 	console.log(data);
+
+	useEffect(() => {
+		
+	},[]);
 
 	if (data) {
 		return (

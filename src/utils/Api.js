@@ -48,3 +48,12 @@ export const performSearch = createAsyncThunk(
 		return data.data.children.map((subreddit) => subreddit.data);
 	}
 );
+
+export const fetchPost = createAsyncThunk(
+	'post/fetchPost',
+	async ({ subreddit, id }) => {
+		const response = await fetch(`https://www.reddit.com/r/${subreddit}/comments/${id}.json`);
+		const data = await response.json();
+		return data;
+	}
+);
