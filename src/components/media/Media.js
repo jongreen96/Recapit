@@ -1,4 +1,11 @@
+import { useSelector } from 'react-redux';
+import { selectPost } from '../../features/post/PostSlice';
+
 const Media = ({ post }) => {
+	const { isLoading } = useSelector(selectPost);
+
+	if (isLoading) return <div></div>;
+
 	if (post?.post_hint === 'image') {
 		return (
 			<div className='media'>
@@ -57,7 +64,7 @@ const Media = ({ post }) => {
 		);
 	}
 
-	return null;
+	return <div></div>;
 };
 
 export default Media;

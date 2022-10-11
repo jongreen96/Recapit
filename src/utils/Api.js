@@ -59,6 +59,7 @@ export const fetchPost = createAsyncThunk(
 		const data = await response.json();
 		const post = data[0].data.children[0].data;
 		const comments = data[1].data.children;
+		console.log(comments);
 		return { post, comments };
 	}
 );

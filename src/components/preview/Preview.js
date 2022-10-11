@@ -11,7 +11,7 @@ import { fetchPost } from '../../utils/Api';
 
 const Preview = () => {
 	const dispatch = useDispatch();
-	const { post } = useSelector(selectPost);
+	const { post, isLoading } = useSelector(selectPost);
 	const { posts } = useSelector(selectPosts);
 	const { selectedPost } = useSelector(selectPosts);
 	let currentPost = posts.find((post) => post.id === selectedPost);
@@ -26,8 +26,8 @@ const Preview = () => {
 	return (
 		<div className='preview tile'>
 			<Media post={currentPost} />
-			<h2 className='title'>{currentPost?.title}</h2>
-			<p className='subtext'>{currentPost?.selftext}</p>
+			<h2 className='title'>{isLoading ? 'Loading...' : currentPost?.title}</h2>
+			<p className='subtext'>{isLoading ? 'Loading...' : currentPost?.selftext}</p>
 			<Comments comments={post.comments} />
 		</div>
 	);
