@@ -15,6 +15,17 @@
 	max-height: 50vh;
 }
 
+.fullscreen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 100;
+	background-color: rgba(0, 0, 0, 0.8);
+	max-height: none;
+}
+
 .media > img {
 	object-fit: contain;
 }
@@ -34,6 +45,8 @@
 .subtext {
 	padding: 0 10px 10px;
 	background-color: #f5f5f5;
+	max-height: 30vh;
+	overflow: scroll;
 }
 
 @media only screen and (max-width: 1440px) {

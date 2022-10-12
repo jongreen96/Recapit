@@ -1,4 +1,8 @@
 const Media = ({ post }) => {
+	const handleClick = (e) => {
+		e.target.parentNode.classList.toggle('fullscreen');
+	};
+
 	if (post?.post_hint === 'image') {
 		return (
 			<div className='media'>
@@ -6,6 +10,7 @@ const Media = ({ post }) => {
 					src={post.url}
 					className='post-preview-image'
 					alt={post.id}
+					onClick={handleClick}
 				/>
 			</div>
 		);
@@ -51,7 +56,11 @@ const Media = ({ post }) => {
 		return (
 			<div className='media'>
 				<a href={post.url} target='_blank' rel='noreferrer'>
-					<img src={post.thumbnail} alt='gif'></img>
+					<img
+						src={post.thumbnail}
+						alt='gif'
+						onClick={handleClick}
+					></img>
 				</a>
 			</div>
 		);

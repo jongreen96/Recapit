@@ -26,7 +26,9 @@ const Preview = () => {
 	return (
 		<div className='preview tile'>
 			<Media post={currentPost} />
-			<h2 className='title'>{currentPost?.title}</h2>
+			<a href={currentPost?.url} target='_blank' rel='noreferrer'>
+				<h2 className='title'>{currentPost?.title}</h2>
+			</a>
 			<p className='subtext'>{currentPost?.selftext}</p>
 			<Comments comments={post.comments} />
 		</div>
