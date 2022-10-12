@@ -1,11 +1,4 @@
-import { useSelector } from 'react-redux';
-import { selectPost } from '../../features/post/PostSlice';
-
 const Media = ({ post }) => {
-	const { isLoading } = useSelector(selectPost);
-
-	if (isLoading) return <div></div>;
-
 	if (post?.post_hint === 'image') {
 		return (
 			<div className='media'>
@@ -47,7 +40,7 @@ const Media = ({ post }) => {
 				<iframe
 					src={post.media.reddit_video.fallback_url}
 					title={post.title}
-                    allowFullScreen
+					allowFullScreen
 					allow='autoplay'
 				/>
 			</div>

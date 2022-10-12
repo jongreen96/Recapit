@@ -4,7 +4,7 @@
 	grid-column: 3/4;
 	grid-row: 2/4;
 	display: grid;
-	grid-template-rows: minmax(1fr, 50%) min-content min-content auto;
+	grid-template-rows: min-content min-content min-content auto;
 }
 
 .media {
@@ -12,6 +12,7 @@
 	display: flex;
 	justify-content: center;
 	background-color: #000;
+	max-height: 50vh;
 }
 
 .media > img {
@@ -20,6 +21,7 @@
 
 .media > iframe {
 	border: none;
+	height: 50vh;
 }
 
 .title {

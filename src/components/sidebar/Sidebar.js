@@ -14,7 +14,6 @@ const Sidebar = () => {
 		dispatch(fetchSubreddit(subreddit));
 	}, [subreddit, dispatch]);
 
-	if (isLoading) return <div className='sidebar'>Loading...</div>;
 	if (isError)
 		return <div className='sidebar'>Error! Please reload page.</div>;
 

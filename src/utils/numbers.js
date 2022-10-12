@@ -2,7 +2,7 @@ export const formatNumber = (number) => {
 	let newNumber = number;
 	if (newNumber > 1000) {
 		const suffixes = ['', 'k', 'm', 'b', 't'];
-		const suffixNum = Math.floor(('' + newNumber).length / 3);
+		const suffixNum = Math.floor(('' + newNumber + 1).length / 4);
 		let shortValue = '';
 		for (let precision = 2; precision >= 1; precision--) {
 			shortValue = parseFloat(
