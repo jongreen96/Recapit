@@ -49,6 +49,13 @@
 	overflow: scroll;
 }
 
+.post-info {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 10px 0;
+}
+
 @media only screen and (max-width: 1440px) {
 	.preview {
 		grid-column: 3/4;

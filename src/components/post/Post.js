@@ -28,6 +28,7 @@ const Post = ({ data }) => {
 					<p>{formatNumber(data.score)}</p>
 					<p>{formatNumber(data.num_comments)}</p>
 					<p>Share</p>
+					<h6>{`r/${data.subreddit}`}</h6>
 				</div>
 				<div className='post-thumbnail'>
 					<img

@@ -29,7 +29,13 @@ const Preview = () => {
 			<a href={currentPost?.url} target='_blank' rel='noreferrer'>
 				<h2 className='title'>{currentPost?.title}</h2>
 			</a>
-			<p className='subtext'>{currentPost?.selftext}</p>
+			<div className='subtext'>
+				<div className='post-info'>
+					<h5>{`Posted by u/${currentPost?.author}`}</h5>
+					<h5>{`r/${currentPost?.subreddit}`}</h5>
+				</div>
+				<p>{currentPost?.selftext}</p>
+			</div>
 			<Comments comments={post.comments} />
 		</div>
 	);
