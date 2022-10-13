@@ -5,16 +5,16 @@ import './PopularSubreddits.css';
 import logo from '../../images/recapit-logo.svg';
 
 const subreddits = [
-	'formula1',
-	'aww',
+	'all',
 	'askreddit',
-	'funny',
-	'gaming',
-	'movies',
-	'news',
+	'aww',
 	'pics',
-	'science',
-	'sports',
+	'damnthatsinteresting',
+	'funny',
+	'worldnews',
+	'interestingasfuck',
+	'mademesmile',
+	'whitepeopletwitter',
 ];
 
 const PopularSubreddits = () => {
