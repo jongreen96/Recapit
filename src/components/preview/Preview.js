@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import { selectPost } from '../../features/post/PostSlice';
 import { selectPosts } from '../../features/posts/PostsSlice';
 import { fetchPost } from '../../utils/Api';
+import { setSubreddit } from '../../features/subreddit/subredditSlice';
 
 const Preview = () => {
 	const dispatch = useDispatch();
@@ -31,8 +32,14 @@ const Preview = () => {
 			</a>
 			<div className='subtext'>
 				<div className='post-info'>
-					<h5>{`Posted by u/${currentPost?.author}`}</h5>
-					<h5>{`r/${currentPost?.subreddit}`}</h5>
+					<h5>
+						{currentPost && `Posted by u/${currentPost?.author}`}
+					</h5>
+					<h5
+						onClick={() =>
+							dispatch(setSubreddit(currentPost.subreddit))
+						}
+					>{currentPost && `r/${currentPost?.subreddit}`}</h5>
 				</div>
 				<p>{currentPost?.selftext}</p>
 			</div>

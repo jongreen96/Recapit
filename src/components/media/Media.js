@@ -59,7 +59,6 @@ const Media = ({ post }) => {
 					<img
 						src={post.thumbnail}
 						alt='gif'
-						onClick={handleClick}
 					></img>
 				</a>
 			</div>
