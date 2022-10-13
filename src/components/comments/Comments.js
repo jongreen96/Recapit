@@ -5,16 +5,21 @@ import { useSelector } from 'react-redux';
 import { selectPost } from '../../features/post/PostSlice';
 
 const Comments = ({ comments }) => {
-    const { isLoading } = useSelector(selectPost);
+	const { isLoading } = useSelector(selectPost);
 
 	if (isLoading) return <span>Loading ...</span>;
-    
+
+	console.log(comments);
+
 	return (
 		<div className='comments'>
 			{comments?.map((comment, i) =>
-				comment.data.distinguished !== 'moderator' ? (
+				comment.data.distinguished !== 'moderator' &&
+				comment.data.body ? ( //currently hides 'show more comments'
 					<Comment key={i} comment={comment} />
-				) : null
+				) : (
+					<></>
+				)
 			)}
 		</div>
 	);
