@@ -22,7 +22,7 @@ const Post = ({ data }) => {
 					: null
 			}
 		>
-			<h4 className='post-title'>{data.title}</h4>
+			<h3 className='post-title'>{data.title}</h3>
 			<div className='flex-container'>
 				<div className='post-stats'>
 					<p>{formatNumber(data.score)}</p>
