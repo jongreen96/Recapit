@@ -15,7 +15,7 @@ export const formatNumber = (number) => {
 				/[^a-zA-Z 0-9]+/g,
 				''
 			);
-			if (dotLessShortValue.length <= 2) {
+			if (dotLessShortValue.length <= 3) {
 				break;
 			}
 		}
