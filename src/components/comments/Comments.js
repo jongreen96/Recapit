@@ -1,5 +1,6 @@
 import Comment from '../comment/Comment';
 import './Comments.css';
+import { v4 as uuidv4 } from 'uuid';
 
 import { useSelector } from 'react-redux';
 import { selectPost } from '../../features/post/PostSlice';
@@ -9,14 +10,12 @@ const Comments = ({ comments }) => {
 
 	if (isLoading) return <span>Loading ...</span>;
 
-	console.log(comments);
-
 	return (
 		<div className='comments'>
-			{comments?.map((comment, i) =>
+			{comments?.map((comment) =>
 				comment.data.distinguished !== 'moderator' &&
 				comment.data.body ? ( //currently hides 'show more comments'
-					<Comment key={i} comment={comment} />
+					<Comment key={uuidv4()} comment={comment} />
 				) : (
 					<></>
 				)

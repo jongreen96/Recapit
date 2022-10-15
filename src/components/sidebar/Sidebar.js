@@ -7,7 +7,7 @@ import { formatNumber } from '../../utils/numbers';
 
 const Sidebar = () => {
 	const dispatch = useDispatch();
-	const { subreddit, subredditInfo, isLoading, isError } =
+	const { subreddit, subredditInfo, isError } =
 		useSelector(selectSubreddit);
 
 	useEffect(() => {
