@@ -3,11 +3,20 @@ import { setSelectedPost, selectPosts } from '../../features/posts/PostsSlice';
 
 import './Post.css';
 import logo from '../../images/recapit-logo.svg';
+import upvote from '../../images/upvote-icon.svg';
+import comment from '../../images/comment-icon.svg';
+import share from '../../images/share-icon.svg';
 import { formatNumber } from '../../utils/numbers';
 
 const Post = ({ data }) => {
 	const dispatch = useDispatch();
 	const { selectedPost } = useSelector(selectPosts);
+
+	const handleShareClick = () => {
+		navigator.clipboard.writeText(data.url);
+		alert('Link copied to clipboard!');
+	};
+
 	return (
 		<div
 			className='post tile'
@@ -25,9 +34,18 @@ const Post = ({ data }) => {
 			<h3 className='post-title'>{data.title}</h3>
 			<div className='flex-container'>
 				<div className='post-stats'>
-					<p>{formatNumber(data.score)}</p>
-					<p>{formatNumber(data.num_comments)}</p>
-					<p>Share</p>
+					<div className='post-stat'>
+						<img src={upvote} alt='upvote' />
+						<p>{formatNumber(data.score)}</p>
+					</div>
+					<div className='post-stat'>
+						<img src={comment} alt='comment' />
+						<p>{formatNumber(data.num_comments)}</p>
+					</div>
+					<div className='post-stat share' onClick={handleShareClick}>
+						<img src={share} alt='share' />
+						<p>Share</p>
+					</div>
 					<h6>{`r/${data.subreddit}`}</h6>
 				</div>
 				<div className='post-thumbnail'>

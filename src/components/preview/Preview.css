@@ -1,6 +1,6 @@
 .preview {
 	padding: 0 !important;
-	overflow: scroll;
+	overflow-y: scroll;
 	grid-column: 3/4;
 	grid-row: 2/4;
 	display: grid;
@@ -13,6 +13,7 @@
 	justify-content: center;
 	background-color: #000;
 	max-height: 50vh;
+	
 }
 
 .fullscreen {

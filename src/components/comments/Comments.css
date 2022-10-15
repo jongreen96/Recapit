@@ -33,3 +33,15 @@
 	width: 30px;
 	height: 30px;
 }
+
+.replies {
+	display: flex;
+	/* flex-direction: column; */
+	align-items: center;
+}
+
+.replies>img {
+	scale: 0.7;
+	rotate: 180deg;
+	margin: -10px;
+}

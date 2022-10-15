@@ -6,6 +6,10 @@
 	padding: 0 0 0 10px !important;
 }
 
+.post:hover {
+	background-color: #f5f5f5;
+}
+
 .post-title {
 	padding: 10px;
 	font-weight: bold;
@@ -19,6 +23,18 @@
 	height: 80px;
 }
 
+.post-stat {
+	display: flex;
+	/* align-items: center; */
+	flex-direction: row-reverse;
+	gap: 2px;
+}
+
+.post-stat > img {
+	filter: invert(48%) sepia(0%) saturate(1198%) hue-rotate(169deg)
+		brightness(88%) contrast(80%);
+}
+
 .post-thumbnail {
 	height: 100px;
 	width: 100px;
@@ -30,4 +46,8 @@
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+}
+
+.share {
+	cursor: pointer;
 }
