@@ -1,6 +1,6 @@
 .preview {
 	padding: 0 !important;
-	overflow: hidden;
+	overflow: scroll;
 	grid-column: 3/4;
 	grid-row: 2/4;
 	display: grid;
