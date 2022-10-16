@@ -22,7 +22,7 @@ const Comment = ({ comment }) => {
 					<img src={logo} alt={comment.author} />
 					<div>
 						<h6>{comment.data.author}</h6>
-						<p>{comment.data.body}</p>
+						<p className='comment-data'>{comment.data.body}</p>
 					</div>
 				</div>
 				{replies !== 0 && (

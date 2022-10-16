@@ -24,6 +24,10 @@
 	padding-right: 10px;
 }
 
+.comment-data {
+	word-break: break-word;
+}
+
 .comment-body > div {
 	display: flex;
 	gap: 5px;
