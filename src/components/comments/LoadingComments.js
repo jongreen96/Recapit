@@ -11,7 +11,7 @@ const LoadingComments = () => {
 					<div
 						className='loading-comment-content'
 						style={{
-							height: `${Math.floor(Math.random() * 100) + 40}px`,
+							height: `${Math.floor(Math.random() * 80) + 40}px`,
 						}}
 					></div>
 				</div>
