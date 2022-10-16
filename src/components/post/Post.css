@@ -31,8 +31,7 @@
 }
 
 .post-stat > img {
-	filter: invert(48%) sepia(0%) saturate(1198%) hue-rotate(169deg)
-		brightness(88%) contrast(80%);
+	filter: invert(46%) sepia(57%) saturate(3013%) hue-rotate(164deg) brightness(90%) contrast(108%);
 }
 
 .post-thumbnail {
