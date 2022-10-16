@@ -7,6 +7,36 @@
 	overflow: scroll;
 }
 
+.loading-post {
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 10px;
+	display: flex;
+	flex-direction: row-reverse;
+	background: linear-gradient(90deg, #ddd, #eee, #ddd);
+    background-size: 400% 400%;
+    animation: loading 2s ease-in-out infinite;
+}
+
+.loading-post-thumbnail {
+	height: 100px;
+	width: 100px;
+	border-radius: 10px;
+	background-color: #ccc;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 @media only screen and (max-width: 1440px) {
 	.posts {
 		grid-column: 1/3;

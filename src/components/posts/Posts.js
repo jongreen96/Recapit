@@ -1,5 +1,6 @@
 import './Posts.css';
 import Post from '../post/Post';
+import LoadingPosts from './LoadingPosts';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { selectSubreddit } from '../../features/subreddit/subredditSlice';
@@ -16,7 +17,7 @@ const Posts = () => {
 		dispatch(fetchPosts(data));
 	}, [subreddit, time, dispatch]);
 
-	if (isLoading) return <div className='posts'>Loading...</div>;
+	if (isLoading) return <LoadingPosts />;
 
 	if (isError) return <div className='posts'>Error!</div>;
 
