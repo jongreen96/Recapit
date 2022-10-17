@@ -6,7 +6,7 @@ body {
 }
 
 .tile {
-	background-color: #fff;
+	background-color: var(--color-bg);
 	border-radius: 10px;
 	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 	padding: 10px;
@@ -32,10 +32,6 @@ body {
 	grid-template-columns: 250px 1fr 50%;
 	grid-template-rows: 55px 270px calc(100vh - 370px);
 	gap: 10px;
-}
-
-*::-webkit-scrollbar {
-	display: none;
 }
 
 @media only screen and (max-width: 1440px) {

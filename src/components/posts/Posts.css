@@ -13,7 +13,12 @@
     border-radius: 10px;
 	display: flex;
 	flex-direction: row-reverse;
-	background: linear-gradient(90deg, #ddd, #eee, #ddd);
+	background: linear-gradient(
+		90deg,
+		var(--color-secondary-loading),
+		var(--color-primary-loading),
+		var(--color-secondary-loading)
+	);
     background-size: 400% 400%;
     animation: loading 2s ease-in-out infinite;
 }

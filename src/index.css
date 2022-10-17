@@ -2,7 +2,23 @@
 	--color-primary: #0099cc;
 	--color-secondary: #707070;
 	--color-tertiary: #f5f5f5;
+	--color-bg: #fff;
+
+	--color-primary-loading: #eee;
+	--color-secondary-loading: #ccc;
 }
+
+.darkmode {
+	background-color: #101318;
+
+	--color-secondary: #ccc;
+	--color-tertiary: #0b0e11;
+	--color-bg: rgb(37, 37, 37);
+
+	--color-primary-loading: #1f1f1f;
+	--color-secondary-loading: #2f2f2f;
+}
+
 
 body {
 	margin: 0;
@@ -19,4 +35,8 @@ a:active {
 
 * {
 	user-select: none;
+}
+
+*::-webkit-scrollbar {
+	display: none;
 }

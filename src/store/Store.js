@@ -3,6 +3,7 @@ import subredditReducer from '../features/subreddit/subredditSlice';
 import postsReducer from '../features/posts/PostsSlice';
 import postReducer from '../features/post/PostSlice';
 import searchReducer from '../features/search/searchSlice';
+import themeReducer from '../features/theme/ThemeSlice';
 
 const store = configureStore({
 	reducer: {
@@ -10,6 +11,7 @@ const store = configureStore({
 		posts: postsReducer,
 		search: searchReducer,
 		post: postReducer,
+		theme: themeReducer,
 	},
 });
 

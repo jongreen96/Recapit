@@ -11,6 +11,7 @@ import { formatNumber } from '../../utils/numbers';
 const Post = ({ data }) => {
 	const dispatch = useDispatch();
 	const { selectedPost } = useSelector(selectPosts);
+	const darkmode = useSelector((state) => state.theme.darkmode);
 
 	const handleShareClick = () => {
 		navigator.clipboard.writeText(data.url);
@@ -24,7 +25,7 @@ const Post = ({ data }) => {
 			style={
 				selectedPost === data.id
 					? {
-							backgroundColor: '#f5f5f5',
+							backgroundColor: darkmode ? '#0b0e11' : '#f5f5f5',
 							color: '#0099cc',
 							outline: '2px solid #0099cc',
 					  }
