@@ -59,6 +59,7 @@ const Media = ({ post }) => {
 					<img
 						src={post.thumbnail}
 						alt='gif'
+						height='400px'
 					></img>
 				</a>
 			</div>
