@@ -7,7 +7,6 @@ export const fetchPosts = createAsyncThunk(
 			`https://www.reddit.com/r/${subreddit}/top/.json?t=${time}`
 		);
 		const data = await response.json();
-		console.log(data);
 		return data.data.children.map((post) => post.data);
 	}
 );

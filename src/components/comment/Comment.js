@@ -1,6 +1,8 @@
 import logo from '../../images/recapit-logo.svg';
 import reply from '../../images/reply-icon.svg';
+import upvote from '../../images/upvote-icon.svg';
 import Comments from '../comments/Comments';
+import { formatNumber } from '../../utils/numbers';
 import { useState } from 'react';
 
 const Comment = ({ comment }) => {
@@ -20,6 +22,10 @@ const Comment = ({ comment }) => {
 			<div className='comment-body' onClick={() => toggleReplies()}>
 				<div>
 					<img src={logo} alt={comment.author} />
+					<div className='comment-score'>
+						<img src={upvote} alt='upvote' />
+						<h5>{formatNumber(comment.data.score)}</h5>
+					</div>
 					<div>
 						<h6>{comment.data.author}</h6>
 						<p className='comment-data'>{comment.data.body}</p>
