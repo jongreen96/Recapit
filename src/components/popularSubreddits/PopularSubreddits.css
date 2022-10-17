@@ -19,8 +19,8 @@ li {
 }
 
 li:hover {
-	color: #0099cc;
-	background-color: #f5f5f5;
+	color: var(--color-primary);
+	background-color: var(--color-tertiary);
 }
 
 li > img {

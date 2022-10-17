@@ -7,7 +7,7 @@
 }
 
 .post:hover {
-	background-color: #f5f5f5;
+	background-color: var(--color-tertiary);
 }
 
 .post-title {
@@ -25,7 +25,6 @@
 
 .post-stat {
 	display: flex;
-	/* align-items: center; */
 	flex-direction: row-reverse;
 	gap: 2px;
 }
@@ -37,7 +36,6 @@
 .post-thumbnail {
 	height: 100px;
 	width: 100px;
-	border-left: #f5f5f5 1px solid;
 }
 
 .post-thumbnail > img {

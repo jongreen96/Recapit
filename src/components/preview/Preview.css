@@ -40,14 +40,14 @@
 
 .title {
 	padding: 20px 10px 10px;
-	background-color: #f5f5f5;
-	color: #0099cc;
+	background-color: var(--color-tertiary);
+	color: var(--color-primary);
 	font-weight: bold;
 }
 
 .subtext {
 	padding: 0 10px 10px;
-	background-color: #f5f5f5;
+	background-color: var(--color-tertiary);
 	max-height: 30vh;
 	overflow: scroll;
 }
