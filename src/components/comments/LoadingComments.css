@@ -22,9 +22,9 @@
 	border-radius: 10px;
 	background: linear-gradient(
 		90deg,
-		var(--color-secondary-loading),
 		var(--color-primary-loading),
-		var(--color-secondary-loading)
+		var(--color-secondary-loading),
+		var(--color-primary-loading)
 	);
 	background-size: 400% 400%;
 	animation: loading 2s ease-in-out infinite;
