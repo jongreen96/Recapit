@@ -1,7 +1,6 @@
 .popular-subreddits {
 	grid-column: 1/2;
 	grid-row: 3/4;
-	overflow: scroll;
 	max-height: 400px;
 	cursor: pointer;
 }

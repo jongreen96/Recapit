@@ -9,12 +9,12 @@ const subreddits = [
 	'askreddit',
 	'aww',
 	'pics',
-	'damnthatsinteresting',
+	'formula1',
 	'funny',
 	'worldnews',
 	'interestingasfuck',
 	'mademesmile',
-	'whitepeopletwitter',
+	'gaming',
 ];
 
 const PopularSubreddits = () => {
