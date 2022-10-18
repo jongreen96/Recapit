@@ -24,8 +24,13 @@ const Preview = () => {
 		}
 	}, [dispatch, subreddit, selectedPost]);
 
+	const handleClick = () => {
+		document.querySelector('.preview').classList.toggle('preview-active');
+	};
+
 	return (
 		<div className='preview tile'>
+			<p className='mobile-close' onClick={handleClick}>X</p>
 			<Media post={currentPost} />
 			<a href={currentPost?.url} target='_blank' rel='noreferrer'>
 				<h2 className='title'>{currentPost?.title}</h2>

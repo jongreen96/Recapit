@@ -21,7 +21,10 @@ const Post = ({ data }) => {
 	return (
 		<div
 			className='post tile'
-			onClick={() => dispatch(setSelectedPost(data.id))}
+			onClick={() => {
+				dispatch(setSelectedPost(data.id))
+				document.querySelector('.preview').classList.toggle('preview-active');
+			}}
 			style={
 				selectedPost === data.id
 					? {
