@@ -83,4 +83,4 @@ Command line, Wireframes)
 # Images
 Main screen                      |  Text based post                | Light mode
 :-------------------------------:|:-------------------------------:|:-------------------------------:
-![](./public/images/Preview1.png)|![](./public/images/Preview2.png)|![](./Public/images/preview3.png)
+![](./public/images/Preview1.png)|![](./public/images/Preview2.png)|![](./public/images/Preview3.png)
