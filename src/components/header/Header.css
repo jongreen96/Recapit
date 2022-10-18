@@ -17,8 +17,30 @@ select {
 	background-color: var(--color-tertiary);
 }
 
+.settings-icon {
+	width: 28px;
+	align-self: center;
+	filter: invert(50%) sepia(7%) saturate(18%) hue-rotate(323deg)
+		brightness(84%) contrast(89%);
+}
+
 @media only screen and (max-width: 768px) {
 	.text {
 		display: none;
 	}
+
+	.header {
+		gap: 5px;
+	}
+
+	.header-logo {
+		width: 24px;
+		margin-right: -5px;
+	}
+
+	.settings-icon {
+		width: 24px;
+		margin-left: -5px;
+	}
 }
+
