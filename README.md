@@ -1,4 +1,4 @@
-[![Reddit-Client](./public/images/preview1.png)](https://github.com/jongreen96/recapit-reddit-client)
+[![Reddit-Client](./public/images/Preview1.png)](https://github.com/jongreen96/recapit-reddit-client)
 
 # Simple, fast & intuitive
 
@@ -31,7 +31,7 @@ Recapit Reddit Client is a project that I have been working on to learn React an
 
 ## Technologies
 
-Almost the entire codebase consists in **Javascript**
+Almost the entire codebase consists in **Javascript** & **CSS**
 
 Here is a list of technologies used:
 
@@ -81,13 +81,6 @@ Command line, Wireframes)
 ```
 
 # Images
-<div >
-[![Reddit-Client](./public/images/preview1.png)](https://github.com/jongreen96/recapit-reddit-client)
-[![Reddit-Client](./public/images/preview2.png)](https://github.com/jongreen96/recapit-reddit-client)
-[![Reddit-Client](./public/images/preview3.png)](https://github.com/jongreen96/recapit-reddit-client)
-</div>
-
-
 Main screen                      |  Text based post                | Light mode
 :-------------------------------:|:-------------------------------:|:-------------------------------:
-![](./public/images/preview1.png)|![](./public/images/preview2.png)|![](./public/images/preview3.png)
+![](./public/images/Preview1.png)|![](./public/images/Preview2.png)|![](./Public/images/preview3.png)
