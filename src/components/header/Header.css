@@ -40,8 +40,8 @@ select {
 }
 
 .settings-menu > div > img {
-	filter: invert(46%) sepia(57%) saturate(3013%) hue-rotate(164deg) brightness(90%) contrast(108%);
-
+	filter: invert(46%) sepia(57%) saturate(3013%) hue-rotate(164deg)
+		brightness(90%) contrast(108%);
 }
 
 @media only screen and (max-width: 768px) {
@@ -67,4 +67,3 @@ select {
 		left: 20px;
 	}
 }
-

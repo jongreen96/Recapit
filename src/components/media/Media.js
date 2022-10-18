@@ -56,11 +56,7 @@ const Media = ({ post }) => {
 		return (
 			<div className='media'>
 				<a href={post.url} target='_blank' rel='noreferrer'>
-					<img
-						src={post.thumbnail}
-						alt='gif'
-						height='400px'
-					></img>
+					<img src={post.thumbnail} alt='gif' height='400px'></img>
 				</a>
 			</div>
 		);

@@ -13,7 +13,6 @@
 	justify-content: center;
 	background-color: #000;
 	max-height: 50vh;
-	
 }
 
 .fullscreen {
@@ -92,7 +91,7 @@
 		color: var(--color-tertiary);
 		background-color: var(--color-secondary);
 		border-radius: 50%;
-		line-height: .7;
+		line-height: 0.7;
 		margin: 10px;
 	}
 

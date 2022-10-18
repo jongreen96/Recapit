@@ -1,8 +1,6 @@
 import './LoadingComments.css';
 
 const LoadingComments = () => {
-	
-
 	return (
 		<div className='loading-comments'>
 			{[...Array(20)].map((_, i) => (

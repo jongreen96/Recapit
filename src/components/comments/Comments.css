@@ -43,7 +43,7 @@
 	align-items: center;
 }
 
-.replies>img {
+.replies > img {
 	scale: 0.7;
 	rotate: 180deg;
 	margin: -10px;
@@ -57,7 +57,8 @@
 }
 
 .comment-score img {
-	filter: invert(46%) sepia(57%) saturate(3013%) hue-rotate(164deg) brightness(90%) contrast(108%);
+	filter: invert(46%) sepia(57%) saturate(3013%) hue-rotate(164deg)
+		brightness(90%) contrast(108%);
 	width: 20px;
 	height: 20px;
 }

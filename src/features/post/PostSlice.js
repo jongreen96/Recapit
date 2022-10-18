@@ -8,8 +8,7 @@ const PostSlice = createSlice({
 		isLoading: false,
 		isError: false,
 	},
-	reducers: {
-	},
+	reducers: {},
 	extraReducers: {
 		[fetchPost.fulfilled]: (state, action) => {
 			state.post = action.payload;

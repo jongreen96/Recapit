@@ -30,7 +30,9 @@ const Preview = () => {
 
 	return (
 		<div className='preview tile'>
-			<p className='mobile-close' onClick={handleClick}>X</p>
+			<p className='mobile-close' onClick={handleClick}>
+				X
+			</p>
 			<Media post={currentPost} />
 			<a href={currentPost?.url} target='_blank' rel='noreferrer'>
 				<h2 className='title'>{currentPost?.title}</h2>
@@ -44,7 +46,9 @@ const Preview = () => {
 						onClick={() =>
 							dispatch(setSubreddit(currentPost.subreddit))
 						}
-					>{currentPost && `r/${currentPost?.subreddit}`}</h5>
+					>
+						{currentPost && `r/${currentPost?.subreddit}`}
+					</h5>
 				</div>
 				<p>{currentPost?.selftext}</p>
 			</div>

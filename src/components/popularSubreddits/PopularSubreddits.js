@@ -25,8 +25,9 @@ const PopularSubreddits = () => {
 			<h2>Popular Subreddits:</h2>
 			<ul>
 				{subreddits.map((subreddit, index) => (
-					<li key={index}
-					onClick={() => dispatch(setSubreddit(subreddit))}
+					<li
+						key={index}
+						onClick={() => dispatch(setSubreddit(subreddit))}
 					>
 						<img src={logo} alt='subreddit icon' />
 						<h3>r/{subreddit}</h3>
