@@ -79,8 +79,8 @@
 		grid-column: 1/-1;
 		grid-row: 3/5;
 		z-index: 1;
-		transform: translateX(200%);
 		outline: var(--color-primary) solid 5px;
+		display: none;
 	}
 
 	.mobile-close {
@@ -97,6 +97,6 @@
 	}
 
 	.preview-active {
-		transform: translateX(0);
+		display: block;
 	}
 }

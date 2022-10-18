@@ -24,6 +24,7 @@ const Post = ({ data }) => {
 			onClick={() => {
 				dispatch(setSelectedPost(data.id))
 				document.querySelector('.preview').classList.toggle('preview-active');
+				document.querySelector('.preview').scrollTo(0, 0);
 			}}
 			style={
 				selectedPost === data.id
