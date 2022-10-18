@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+[![Reddit-Client](./public/images/preview1.png)](https://github.com/jongreen96/recapit-reddit-client)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Simple, fast & intuitive
 
-## Available Scripts
+This is the repo for
+[Recapit Reddit Client](https://github.com/jongreen96/recapit-reddit-client). All code is in this repository.
 
-In the project directory, you can run:
+## Table of contents
 
-### `npm start`
+-   [Table of contents](#table-of-contents)
+-   [Introduction](#introduction)
+-   [Codebase](#codebase)
+    -   [Technologies](#technologies)
+    -   [Folder structure](#folder-structure)
+    -   [Code Style](#code-style)
+-   [Setup Process](#setup-process)
+-   [Acknowledgments](#acknowledgments)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Introduction
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This is a simplistic Reddit client that allows users to browse Reddit posts and comments. It is built with React and Redux, and uses the Reddit JSON API to fetch data. It is also a single page application that uses React Router to handle routing and is a responsive web application that is designed to work on mobile, tablet and desktop devices.
 
-### `npm test`
+Recapit Reddit Client is a project that I have been working on to learn React and Redux. It is a work in progress and I will continue to add features and improve the codebase as I learn more about React and Redux. Features that I would like to add include:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   Ability to interact with posts and comments (upvote, downvote, save, etc.)
+-   Ability to search for posts and comments
+-   Ability to view user profiles
+-   Saving user preferences (e.g. dark mode, sorting, etc.)
 
-### `npm run build`
+# Codebase
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Almost the entire codebase consists in **Javascript**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Here is a list of technologies used:
 
-### `npm run eject`
+-   **React**: Front-end library
+-   **Redux**: Global state management
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Folder structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+reddit-client/
+├── public     # Public files used on the frontend
+└── src        # Frontend SPA
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+reddit-client/src
+├── components     # Reusabble parts
+├── features       # Redux slices
+├── images         # Icons used in the app
+├── store          # Redux store configuration
+└── utils          # Utility functions
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
 
-## Learn More
+## Code Style
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Using `Prettier` on-save, which means you can write code in whatever style
+you want and it will be automatically formatted according to the common style
+when you save.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Setup Process
 
-### Code Splitting
+- Clone or download the repo
+- Open the directory and run `npm install` to install
+- Run development application by using `npm start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Acknowledgments
 
-### Analyzing the Bundle Size
+The project is using
+[Reddit JSON Api](https://github.com/reddit-archive/reddit/wiki/JSON) to get the
+data from [Reddit](https://www.reddit.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The project was a task set by [Codecademy](https://www.codecademy.com) being a
+part of their full-stack engineer course path. The goal of the project was to
+showcase all previews skills and technologies learned until this point on the
+path (HTML / CSS, JavaScript, React, Redux, Git and Github Projects, 
+Command line, Wireframes)
+```
 
-### Making a Progressive Web App
+# Images
+<div >
+[![Reddit-Client](./public/images/preview1.png)](https://github.com/jongreen96/recapit-reddit-client)
+[![Reddit-Client](./public/images/preview2.png)](https://github.com/jongreen96/recapit-reddit-client)
+[![Reddit-Client](./public/images/preview3.png)](https://github.com/jongreen96/recapit-reddit-client)
+</div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Main screen                      |  Text based post                | Light mode
+:-------------------------------:|:-------------------------------:|:-------------------------------:
+![](./public/images/preview1.png)|![](./public/images/preview2.png)|![](./public/images/preview3.png)
