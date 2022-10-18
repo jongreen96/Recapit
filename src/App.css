@@ -8,7 +8,7 @@ body {
 .tile {
 	background-color: var(--color-bg);
 	border-radius: 10px;
-	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+	box-shadow: 2px 2px 8px var(--color-flat);
 	padding: 10px;
 	margin: 2px;
 }

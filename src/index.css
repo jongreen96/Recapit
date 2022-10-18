@@ -6,6 +6,8 @@
 
 	--color-primary-loading: #eee;
 	--color-secondary-loading: #ccc;
+
+	--color-flat: #00000020;
 }
 
 .darkmode {
@@ -17,6 +19,8 @@
 
 	--color-primary-loading: #1f1f1f;
 	--color-secondary-loading: #2f2f2f;
+
+	--color-flat: #ffffff20;
 }
 
 
