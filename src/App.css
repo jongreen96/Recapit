@@ -51,8 +51,8 @@ body {
 	}
 }
 
-@media only screen and (max-width: 480px) {
+/* @media only screen and (max-width: 480px) {
 	.container {
 		grid-template-rows: 55px 55px calc(50vh - 135px) calc(50vh - 135px);
 	}
-}
+} */
