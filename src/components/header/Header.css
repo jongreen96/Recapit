@@ -24,6 +24,26 @@ select {
 		brightness(84%) contrast(89%);
 }
 
+.settings-menu {
+	width: 200px;
+	z-index: 1;
+	position: absolute;
+	top: 75px;
+	left: 50px;
+}
+
+.settings-menu > div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	/* padding: 10px; */
+}
+
+.settings-menu > div > img {
+	filter: invert(46%) sepia(57%) saturate(3013%) hue-rotate(164deg) brightness(90%) contrast(108%);
+
+}
+
 @media only screen and (max-width: 768px) {
 	.text {
 		display: none;
@@ -41,6 +61,10 @@ select {
 	.settings-icon {
 		width: 24px;
 		margin-left: -5px;
+	}
+
+	.settings-menu {
+		left: 20px;
 	}
 }
 
