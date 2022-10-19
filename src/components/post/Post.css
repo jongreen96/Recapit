@@ -4,6 +4,7 @@
 	max-height: fit-content;
 	align-items: center;
 	padding: 0 0 0 10px !important;
+	cursor: pointer;
 }
 
 .post:hover {
