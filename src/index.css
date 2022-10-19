@@ -37,7 +37,7 @@ a:active {
 }
 
 * {
-	user-select: none;
+	/* user-select: none; */
 }
 
 *::-webkit-scrollbar {
